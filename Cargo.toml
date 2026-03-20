@@ -1,0 +1,22 @@
+[package]
+name = "predict_fun_sdk"
+version = "0.1.0"
+edition = "2024"
+description = "Blazing fast async Rust SDK for Predict.fun REST API"
+license = "MIT"
+repository = "https://github.com/PredictDotFun/sdk"
+keywords = ["predict", "trading", "sdk", "api", "client"]
+categories = ["api-bindings", "asynchronous"]
+
+[dependencies]
+reqwest = { version = "0.12", default-features = false, features = ["json", "gzip", "brotli", "deflate", "http2", "rustls-tls"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+thiserror = "2.0"
+tokio = { version = "1.44", features = ["sync", "time"] }
+tokio-tungstenite = { version = "0.24", features = ["rustls-tls-webpki-roots"] }
+futures-util = "0.3"
+
+[dev-dependencies]
+serde_urlencoded = "0.7"
+tokio = { version = "1.44", features = ["macros", "rt"] }
