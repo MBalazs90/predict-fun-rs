@@ -1,6 +1,6 @@
 [package]
-name = "predict_fun_sdk"
-version = "0.1.0"
+name = "predict-fun-rs"
+version = "0.1.1"
 edition = "2024"
 description = "Blazing fast async Rust SDK for Predict.fun REST API"
 license = "MIT"
@@ -8,6 +8,10 @@ repository = "https://github.com/MBalazs90/predict-fun-rs"
 readme = "README.md"
 keywords = ["predict", "trading", "sdk", "api", "client"]
 categories = ["api-bindings", "asynchronous"]
+
+[lib]
+name = "predict_fun_sdk"
+path = "src/lib.rs"
 
 [dependencies]
 reqwest = { version = "0.12", default-features = false, features = ["json", "gzip", "brotli", "deflate", "http2", "rustls-tls"] }

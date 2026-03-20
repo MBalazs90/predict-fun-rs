@@ -707,8 +707,8 @@ dependencies = [
 ]
 
 [[package]]
-name = "predict_fun_sdk"
-version = "0.1.0"
+name = "predict-fun-rs"
+version = "0.1.1"
 dependencies = [
  "anyhow",
  "futures-util",

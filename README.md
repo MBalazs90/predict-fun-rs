@@ -1,4 +1,4 @@
-# predict_fun_sdk
+# predict-fun-rs
 
 Blazing fast async Rust SDK client for the Predict.fun REST API.
 
@@ -17,7 +17,7 @@ Blazing fast async Rust SDK client for the Predict.fun REST API.
 
 ```toml
 [dependencies]
-predict_fun_sdk = { path = "." }
+predict-fun-rs = "0.1.1"
 tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
 ```
 
@@ -134,11 +134,11 @@ Publishing is automated by [publish.yml](/Users/balazs/Documents/predict-rs/.git
 
 1. Add repository secret: `CRATES_IO_TOKEN` (an API token from crates.io).
 2. Bump `version` in `Cargo.toml`.
-3. Push a tag like `v0.1.0`:
+3. Push a tag like `v0.1.1`:
 
 ```bash
-git tag v0.1.0
-git push origin v0.1.0
+git tag v0.1.1
+git push origin v0.1.1
 ```
 
 The workflow will run `cargo package --locked` then `cargo publish --locked`.
