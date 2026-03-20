@@ -127,3 +127,18 @@ async fn main() -> anyhow::Result<()> {
     Ok(())
 }
 ```
+
+## Crates.io Publish (GitHub Actions)
+
+Publishing is automated by [publish.yml](/Users/balazs/Documents/predict-rs/.github/workflows/publish.yml).
+
+1. Add repository secret: `CRATES_IO_TOKEN` (an API token from crates.io).
+2. Bump `version` in `Cargo.toml`.
+3. Push a tag like `v0.1.0`:
+
+```bash
+git tag v0.1.0
+git push origin v0.1.0
+```
+
+The workflow will run `cargo package --locked` then `cargo publish --locked`.

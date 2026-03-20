@@ -4,7 +4,8 @@ version = "0.1.0"
 edition = "2024"
 description = "Blazing fast async Rust SDK for Predict.fun REST API"
 license = "MIT"
-repository = "https://github.com/PredictDotFun/sdk"
+repository = "https://github.com/MBalazs90/predict-fun-rs"
+readme = "README.md"
 keywords = ["predict", "trading", "sdk", "api", "client"]
 categories = ["api-bindings", "asynchronous"]
 
@@ -16,11 +17,11 @@ thiserror = "2.0"
 tokio = { version = "1.44", features = ["sync", "time", "rt-multi-thread", "macros"] }
 tokio-tungstenite = { version = "0.24", features = ["rustls-tls-webpki-roots"] }
 futures-util = "0.3"
+
+[dev-dependencies]
 anyhow = "1.0"
 secp256k1 = { version = "0.29", features = ["recovery"] }
 sha3 = "0.10"
 hex = "0.4"
-
-[dev-dependencies]
 serde_urlencoded = "0.7"
 tokio = { version = "1.44", features = ["macros", "rt"] }
